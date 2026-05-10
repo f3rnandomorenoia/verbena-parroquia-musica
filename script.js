@@ -12,6 +12,10 @@ for (const cat of categories) {
   categoryEl.appendChild(opt);
 }
 
+function youtubeSearchUrl(song) {
+  return `https://www.youtube.com/results?search_query=${encodeURIComponent(`${song.artist} ${song.title}`)}`;
+}
+
 function render() {
   const q = searchEl.value.trim().toLowerCase();
   const cat = categoryEl.value;
@@ -37,11 +41,11 @@ function render() {
       row.innerHTML = `
         <div class="time">${s.time}</div>
         <div>
-          <div class="title">${s.title}</div>
+          <a class="title song-link" href="${youtubeSearchUrl(s)}" target="_blank" rel="noopener noreferrer" title="Buscar en YouTube">${s.title}</a>
           <div class="artist">${s.artist} · ${s.dur}</div>
           <div class="note">${s.note}</div>
         </div>
-        <div class="cat">${s.cat}</div>`;
+        <a class="cat youtube-pill" href="${youtubeSearchUrl(s)}" target="_blank" rel="noopener noreferrer">YouTube ↗</a>`;
       section.appendChild(row);
     }
     playlistEl.appendChild(section);
