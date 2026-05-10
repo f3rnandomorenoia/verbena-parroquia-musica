@@ -1,0 +1,1011 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Playlist verbena parroquial · 13:00–19:00</title>
+  <meta name="description" content="Lista de música respetuosa para una verbena parroquial: pop actual, música cristiana, reggaetón limpio, clásicos españoles 80/90 e inglés familiar." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="badge">🎶 Verbena parroquial · 13:00–19:00</div>
+    <h1>Lista de música familiar y respetuosa</h1>
+    <p>Pop actual de España, canciones cristianas —incluyendo la nueva etapa de Daddy Yankee/DY—, urbano/reggaetón limpio, clásicos españoles de los 80/90 y algún temazo inglés de la época.</p>
+    <div class="actions">
+      <button id="copyAll">Copiar lista completa</button>
+      <a href="#playlist">Ver canciones</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="stats" aria-label="Resumen">
+      <article><strong>106</strong><span>canciones</span></article>
+      <article><strong>6 h</strong><span>de verbena + reserva</span></article>
+      <article><strong>7</strong><span>bloques musicales</span></article>
+    </section>
+
+    <section class="notice">
+      <h2>Criterio de selección</h2>
+      <ul>
+        <li>Letras adecuadas para ambiente familiar/parroquial.</li>
+        <li>Para urbano/reggaetón: usar siempre <strong>radio edit / clean version</strong> cuando exista.</li>
+        <li>La lista está pensada para empezar suave mientras se come y subir energía a media tarde.</li>
+      </ul>
+    </section>
+
+    <section class="filters" aria-label="Filtros">
+      <input id="search" type="search" placeholder="Buscar canción, artista o nota…" />
+      <select id="category">
+        <option value="">Todas las categorías</option>
+      </select>
+    </section>
+
+    <section id="playlist" class="playlist" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <p>Hecha para una verbena parroquial. Consejo: prepara una segunda lista “infantil/ambiente” por si hay comida larga o familias con niños pequeños.</p>
+  </footer>
+
+  <script>
+    window.PLAYLIST = [
+  {
+    "time": "13:00",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Álvaro Soler",
+    "title": "Sofía",
+    "dur": "3:30",
+    "note": "alegre, familiar"
+  },
+  {
+    "time": "13:04",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Nil Moliner",
+    "title": "Libertad",
+    "dur": "3:10",
+    "note": "positiva"
+  },
+  {
+    "time": "13:07",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Dani Fernández",
+    "title": "Bailemos",
+    "dur": "3:35",
+    "note": "pop amable"
+  },
+  {
+    "time": "13:11",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Beret",
+    "title": "Lo siento",
+    "dur": "3:45",
+    "note": "tranquila; revisar volumen"
+  },
+  {
+    "time": "13:15",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Aitana",
+    "title": "Vas a quedarte",
+    "dur": "3:40",
+    "note": "balada pop"
+  },
+  {
+    "time": "13:19",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Morat",
+    "title": "Besos en guerra",
+    "dur": "3:50",
+    "note": "muy conocida"
+  },
+  {
+    "time": "13:23",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Manuel Carrasco",
+    "title": "Qué bonito es querer",
+    "dur": "4:05",
+    "note": "mensaje bonito"
+  },
+  {
+    "time": "13:27",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Rozalén",
+    "title": "Vivir",
+    "dur": "3:20",
+    "note": "optimista"
+  },
+  {
+    "time": "13:31",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Pablo Alborán",
+    "title": "Solamente tú",
+    "dur": "4:05",
+    "note": "familiar"
+  },
+  {
+    "time": "13:35",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Miki Núñez",
+    "title": "La venda",
+    "dur": "3:00",
+    "note": "eurovisiva y festiva"
+  },
+  {
+    "time": "13:38",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Vicco",
+    "title": "Nochentera",
+    "dur": "3:05",
+    "note": "nostalgia ochentera"
+  },
+  {
+    "time": "13:41",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Álvaro de Luna",
+    "title": "Juramento eterno de sal",
+    "dur": "3:25",
+    "note": "pop actual"
+  },
+  {
+    "time": "13:45",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Lola Índigo",
+    "title": "Toy Story",
+    "dur": "3:05",
+    "note": "mejor que otros temas más explícitos"
+  },
+  {
+    "time": "13:48",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Chanel",
+    "title": "SloMo",
+    "dur": "3:00",
+    "note": "energía; usar si encaja el ambiente"
+  },
+  {
+    "time": "13:51",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Abraham Mateo",
+    "title": "Quiero decirte",
+    "dur": "3:15",
+    "note": "pop bailable"
+  },
+  {
+    "time": "13:55",
+    "block": "Acogida y comida",
+    "cat": "Pop actual España",
+    "artist": "Ana Mena",
+    "title": "Música ligera",
+    "dur": "3:15",
+    "note": "bailable y blanca"
+  },
+  {
+    "time": "14:00",
+    "block": "Cristiana y mensajes positivos",
+    "cat": "Cristiana / positiva",
+    "artist": "Daddy Yankee / DY",
+    "title": "Donante de Sangre",
+    "dur": "3:20",
+    "note": "cristiana reciente"
+  },
+  {
+    "time": "14:03",
+    "block": "Cristiana y mensajes positivos",
+    "cat": "Cristiana / positiva",
+    "artist": "DY",
+    "title": "Sonríele",
+    "dur": "3:20",
+    "note": "cristiana, merengue alegre"
+  },
+  {
+    "time": "14:07",
+    "block": "Cristiana y mensajes positivos",
+    "cat": "Cristiana / positiva",
+    "artist": "Redimi2",
+    "title": "Todo va a estar bien",
+    "dur": "3:45",
+    "note": "mensaje de esperanza"
+  },
+  {
+    "time": "14:11",
+    "block": "Cristiana y mensajes positivos",
+    "cat": "Cristiana / positiva",
+    "artist": "Alex Zurdo",
+    "title": "Sin ti",
+    "dur": "3:45",
+    "note": "urbana cristiana"
+  },
+  {
+    "time": "14:15",
+    "block": "Cristiana y mensajes positivos",
+    "cat": "Cristiana / positiva",
+    "artist": "Funky",
+    "title": "No vuelvo pa' atrás",
+    "dur": "3:40",
+    "note": "urbana cristiana"
+  },
+  {
+    "time": "14:19",
+    "block": "Cristiana y mensajes positivos",
+    "cat": "Cristiana / positiva",
+    "artist": "Indiomar",
+    "title": "No me voy a quitar",
+    "dur": "3:40",
+    "note": "reggaetón cristiano"
+  },
+  {
+    "time": "14:23",
+    "block": "Cristiana y mensajes positivos",
+    "cat": "Cristiana / positiva",
+    "artist": "Musiko",
+    "title": "Todo empezó",
+    "dur": "3:25",
+    "note": "urbana cristiana"
+  },
+  {
+    "time": "14:26",
+    "block": "Cristiana y mensajes positivos",
+    "cat": "Cristiana / positiva",
+    "artist": "Gabriel EMC",
+    "title": "Me basta tu amor",
+    "dur": "3:30",
+    "note": "actual cristiana"
+  },
+  {
+    "time": "14:30",
+    "block": "Cristiana y mensajes positivos",
+    "cat": "Cristiana / positiva",
+    "artist": "Athenas",
+    "title": "Todo es tuyo",
+    "dur": "4:05",
+    "note": "para bajar intensidad"
+  },
+  {
+    "time": "14:34",
+    "block": "Cristiana y mensajes positivos",
+    "cat": "Cristiana / positiva",
+    "artist": "Hakuna Group Music",
+    "title": "Sencillamente",
+    "dur": "4:20",
+    "note": "muy parroquial"
+  },
+  {
+    "time": "14:39",
+    "block": "Cristiana y mensajes positivos",
+    "cat": "Cristiana / positiva",
+    "artist": "Hakuna Group Music",
+    "title": "Huracán",
+    "dur": "4:10",
+    "note": "joven y conocida en parroquias"
+  },
+  {
+    "time": "14:43",
+    "block": "Cristiana y mensajes positivos",
+    "cat": "Cristiana / positiva",
+    "artist": "Miel San Marcos",
+    "title": "No hay lugar más alto",
+    "dur": "4:50",
+    "note": "adoración; buena transición"
+  },
+  {
+    "time": "14:48",
+    "block": "Cristiana y mensajes positivos",
+    "cat": "Cristiana / positiva",
+    "artist": "Barak",
+    "title": "Ven Espíritu Santo",
+    "dur": "5:00",
+    "note": "momento tranquilo"
+  },
+  {
+    "time": "14:53",
+    "block": "Cristiana y mensajes positivos",
+    "cat": "Cristiana / positiva",
+    "artist": "Hillsong Worship Español",
+    "title": "Océanos",
+    "dur": "5:00",
+    "note": "balada de adoración"
+  },
+  {
+    "time": "14:58",
+    "block": "Cristiana y mensajes positivos",
+    "cat": "Cristiana / positiva",
+    "artist": "Living",
+    "title": "Dios de lo imposible",
+    "dur": "4:00",
+    "note": "pop cristiano"
+  },
+  {
+    "time": "15:00",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "Carlos Vives, Shakira",
+    "title": "La bicicleta",
+    "dur": "3:50",
+    "note": "latino familiar"
+  },
+  {
+    "time": "15:04",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "Enrique Iglesias ft. Descemer Bueno, Gente de Zona",
+    "title": "Bailando",
+    "dur": "4:00",
+    "note": "muy festiva"
+  },
+  {
+    "time": "15:08",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "Marc Anthony",
+    "title": "Vivir mi vida",
+    "dur": "4:10",
+    "note": "imprescindible"
+  },
+  {
+    "time": "15:12",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "Gente de Zona ft. Marc Anthony",
+    "title": "La gozadera",
+    "dur": "3:25",
+    "note": "fiesta respetuosa"
+  },
+  {
+    "time": "15:16",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "Pedro Capó, Farruko",
+    "title": "Calma - Remix",
+    "dur": "3:55",
+    "note": "playa, buen rollo"
+  },
+  {
+    "time": "15:20",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "Juan Magán",
+    "title": "Bailando por ahí",
+    "dur": "3:25",
+    "note": "fiesta 2010s"
+  },
+  {
+    "time": "15:23",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "Juan Magán ft. Belinda",
+    "title": "Te voy a esperar",
+    "dur": "3:35",
+    "note": "conocida y amable"
+  },
+  {
+    "time": "15:27",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "Álvaro Soler",
+    "title": "El mismo sol",
+    "dur": "3:00",
+    "note": "familiar"
+  },
+  {
+    "time": "15:30",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "Sebastián Yatra",
+    "title": "Tacones rojos",
+    "dur": "3:10",
+    "note": "pop latino limpio"
+  },
+  {
+    "time": "15:34",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "Manuel Turizo",
+    "title": "La Bachata",
+    "dur": "2:45",
+    "note": "romántica; letra suave"
+  },
+  {
+    "time": "15:37",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "CNCO",
+    "title": "Reggaetón lento",
+    "dur": "3:40",
+    "note": "usar versión limpia"
+  },
+  {
+    "time": "15:41",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "Chayanne",
+    "title": "Madre Tierra (Oye)",
+    "dur": "3:25",
+    "note": "baile familiar"
+  },
+  {
+    "time": "15:44",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "Jennifer Lopez",
+    "title": "On The Floor",
+    "dur": "4:00",
+    "note": "fiesta; radio edit"
+  },
+  {
+    "time": "15:48",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "Ricky Martin",
+    "title": "La mordidita",
+    "dur": "3:30",
+    "note": "bailable; revisar si el ambiente es muy familiar"
+  },
+  {
+    "time": "15:52",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "Daddy Yankee",
+    "title": "Limbo",
+    "dur": "3:45",
+    "note": "clásico bailable; radio edit"
+  },
+  {
+    "time": "15:56",
+    "block": "Urbano y reggaetón limpio",
+    "cat": "Reggaetón / latino limpio",
+    "artist": "Daddy Yankee",
+    "title": "Dura",
+    "dur": "3:20",
+    "note": "usar radio edit"
+  },
+  {
+    "time": "16:00",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "Mecano",
+    "title": "Hoy no me puedo levantar",
+    "dur": "3:15",
+    "note": "clásico"
+  },
+  {
+    "time": "16:03",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "Mecano",
+    "title": "Maquillaje",
+    "dur": "2:30",
+    "note": "muy coreable"
+  },
+  {
+    "time": "16:06",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "Nacha Pop",
+    "title": "La chica de ayer",
+    "dur": "3:35",
+    "note": "clásico pop"
+  },
+  {
+    "time": "16:10",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "Alaska y Dinarama",
+    "title": "A quién le importa",
+    "dur": "3:20",
+    "note": "clásico verbena"
+  },
+  {
+    "time": "16:13",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "Radio Futura",
+    "title": "Escuela de calor",
+    "dur": "3:30",
+    "note": "muy reconocible"
+  },
+  {
+    "time": "16:17",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "La Unión",
+    "title": "Lobo-hombre en París",
+    "dur": "3:50",
+    "note": "clásico 80s"
+  },
+  {
+    "time": "16:21",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "Duncan Dhu",
+    "title": "En algún lugar",
+    "dur": "3:50",
+    "note": "pop-rock suave"
+  },
+  {
+    "time": "16:25",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "Los Secretos",
+    "title": "Déjame",
+    "dur": "2:45",
+    "note": "conocida"
+  },
+  {
+    "time": "16:28",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "Hombres G",
+    "title": "Venezia",
+    "dur": "3:45",
+    "note": "mejor opción que letras más gamberras"
+  },
+  {
+    "time": "16:32",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "Seguridad Social",
+    "title": "Chiquilla",
+    "dur": "3:30",
+    "note": "fiestera"
+  },
+  {
+    "time": "16:36",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "Miguel Ríos",
+    "title": "Bienvenidos",
+    "dur": "3:20",
+    "note": "sube el ánimo"
+  },
+  {
+    "time": "16:39",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "Presuntos Implicados",
+    "title": "Cómo hemos cambiado",
+    "dur": "4:20",
+    "note": "descanso elegante"
+  },
+  {
+    "time": "16:44",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "Tam Tam Go!",
+    "title": "Espaldas mojadas",
+    "dur": "4:00",
+    "note": "clásico 90s"
+  },
+  {
+    "time": "16:48",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "El Último de la Fila",
+    "title": "Como un burro amarrado en la puerta del baile",
+    "dur": "3:40",
+    "note": "muy español"
+  },
+  {
+    "time": "16:52",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "Celtas Cortos",
+    "title": "20 de abril",
+    "dur": "4:05",
+    "note": "coreable"
+  },
+  {
+    "time": "16:56",
+    "block": "80/90 españolas",
+    "cat": "80/90 España",
+    "artist": "Los Rodríguez",
+    "title": "Sin documentos",
+    "dur": "4:40",
+    "note": "cierre de bloque"
+  },
+  {
+    "time": "17:00",
+    "block": "Inglés 80/90 familiar",
+    "cat": "Inglés 80/90",
+    "artist": "Queen",
+    "title": "Don't Stop Me Now",
+    "dur": "3:30",
+    "note": "subidón universal"
+  },
+  {
+    "time": "17:04",
+    "block": "Inglés 80/90 familiar",
+    "cat": "Inglés 80/90",
+    "artist": "Whitney Houston",
+    "title": "I Wanna Dance with Somebody",
+    "dur": "4:50",
+    "note": "baile seguro"
+  },
+  {
+    "time": "17:09",
+    "block": "Inglés 80/90 familiar",
+    "cat": "Inglés 80/90",
+    "artist": "Cyndi Lauper",
+    "title": "Girls Just Want to Have Fun",
+    "dur": "3:55",
+    "note": "alegre"
+  },
+  {
+    "time": "17:13",
+    "block": "Inglés 80/90 familiar",
+    "cat": "Inglés 80/90",
+    "artist": "a-ha",
+    "title": "Take On Me",
+    "dur": "3:45",
+    "note": "clásico"
+  },
+  {
+    "time": "17:17",
+    "block": "Inglés 80/90 familiar",
+    "cat": "Inglés 80/90",
+    "artist": "Bon Jovi",
+    "title": "Livin' on a Prayer",
+    "dur": "4:10",
+    "note": "coreable"
+  },
+  {
+    "time": "17:21",
+    "block": "Inglés 80/90 familiar",
+    "cat": "Inglés 80/90",
+    "artist": "Tina Turner",
+    "title": "The Best",
+    "dur": "4:10",
+    "note": "elegante"
+  },
+  {
+    "time": "17:26",
+    "block": "Inglés 80/90 familiar",
+    "cat": "Inglés 80/90",
+    "artist": "Katrina & The Waves",
+    "title": "Walking on Sunshine",
+    "dur": "3:55",
+    "note": "muy familiar"
+  },
+  {
+    "time": "17:30",
+    "block": "Inglés 80/90 familiar",
+    "cat": "Inglés 80/90",
+    "artist": "The Beatles",
+    "title": "Twist and Shout",
+    "dur": "2:35",
+    "note": "antigua pero infalible"
+  },
+  {
+    "time": "17:33",
+    "block": "Inglés 80/90 familiar",
+    "cat": "Inglés 80/90",
+    "artist": "Michael Jackson",
+    "title": "Heal the World",
+    "dur": "4:35",
+    "note": "mensaje positivo"
+  },
+  {
+    "time": "17:38",
+    "block": "Inglés 80/90 familiar",
+    "cat": "Inglés 80/90",
+    "artist": "Michael Jackson",
+    "title": "Black or White",
+    "dur": "3:20",
+    "note": "radio edit"
+  },
+  {
+    "time": "17:41",
+    "block": "Inglés 80/90 familiar",
+    "cat": "Inglés 80/90",
+    "artist": "Madonna",
+    "title": "Holiday",
+    "dur": "4:00",
+    "note": "festiva"
+  },
+  {
+    "time": "17:45",
+    "block": "Inglés 80/90 familiar",
+    "cat": "Inglés 80/90",
+    "artist": "Earth, Wind & Fire",
+    "title": "September",
+    "dur": "3:35",
+    "note": "70s, pero perfecta para verbena"
+  },
+  {
+    "time": "17:49",
+    "block": "Inglés 80/90 familiar",
+    "cat": "Inglés 80/90",
+    "artist": "Culture Club",
+    "title": "Karma Chameleon",
+    "dur": "4:00",
+    "note": "suave y conocida"
+  },
+  {
+    "time": "17:53",
+    "block": "Inglés 80/90 familiar",
+    "cat": "Inglés 80/90",
+    "artist": "The Rembrandts",
+    "title": "I'll Be There for You",
+    "dur": "3:10",
+    "note": "Friends; 90s"
+  },
+  {
+    "time": "17:56",
+    "block": "Inglés 80/90 familiar",
+    "cat": "Inglés 80/90",
+    "artist": "R.E.M.",
+    "title": "Shiny Happy People",
+    "dur": "3:45",
+    "note": "positiva"
+  },
+  {
+    "time": "18:00",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "Fito & Fitipaldis",
+    "title": "Soldadito marinero",
+    "dur": "4:00",
+    "note": "muy conocida"
+  },
+  {
+    "time": "18:04",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "Estopa",
+    "title": "Como Camarón",
+    "dur": "3:25",
+    "note": "fiesta española"
+  },
+  {
+    "time": "18:08",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "Estopa",
+    "title": "La raja de tu falda",
+    "dur": "3:20",
+    "note": "clásico; revisar ambiente parroquial"
+  },
+  {
+    "time": "18:11",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "El Canto del Loco",
+    "title": "Zapatillas",
+    "dur": "3:10",
+    "note": "joven-adulto"
+  },
+  {
+    "time": "18:15",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "La Oreja de Van Gogh",
+    "title": "Puedes contar conmigo",
+    "dur": "3:45",
+    "note": "familiar"
+  },
+  {
+    "time": "18:18",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "La Oreja de Van Gogh",
+    "title": "Rosas",
+    "dur": "3:55",
+    "note": "coreable"
+  },
+  {
+    "time": "18:22",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "Melendi",
+    "title": "Caminando por la vida",
+    "dur": "3:30",
+    "note": "mensaje alegre"
+  },
+  {
+    "time": "18:26",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "Macaco",
+    "title": "Moving",
+    "dur": "3:25",
+    "note": "positivo"
+  },
+  {
+    "time": "18:29",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "Jarabe de Palo",
+    "title": "Bonito",
+    "dur": "4:15",
+    "note": "ideal para parroquia"
+  },
+  {
+    "time": "18:34",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "Jarabe de Palo",
+    "title": "Depende",
+    "dur": "4:20",
+    "note": "clásico"
+  },
+  {
+    "time": "18:38",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "Rosana",
+    "title": "El talismán",
+    "dur": "3:40",
+    "note": "90s alegre"
+  },
+  {
+    "time": "18:42",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "Gloria Estefan",
+    "title": "Conga",
+    "dur": "4:15",
+    "note": "baile familiar"
+  },
+  {
+    "time": "18:46",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "Juanes",
+    "title": "La camisa negra",
+    "dur": "3:35",
+    "note": "popular; no explícita"
+  },
+  {
+    "time": "18:50",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "Maná",
+    "title": "Vivir sin aire",
+    "dur": "4:50",
+    "note": "momento coral"
+  },
+  {
+    "time": "18:55",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "Rafaella Carrà",
+    "title": "Hay que venir al sur",
+    "dur": "3:30",
+    "note": "clásico verbena"
+  },
+  {
+    "time": "18:58",
+    "block": "Cierre: todos cantan",
+    "cat": "Cierre familiar",
+    "artist": "Mocedades",
+    "title": "Eres tú",
+    "dur": "3:35",
+    "note": "cierre bonito"
+  },
+  {
+    "time": "Extra",
+    "block": "Reserva por si hace falta",
+    "cat": "Reserva",
+    "artist": "Aitana",
+    "title": "Teléfono",
+    "dur": "3:15",
+    "note": "radio edit; revisar letra"
+  },
+  {
+    "time": "Extra",
+    "block": "Reserva por si hace falta",
+    "cat": "Reserva",
+    "artist": "Nil Moliner",
+    "title": "Mi religión",
+    "dur": "3:25",
+    "note": "positiva"
+  },
+  {
+    "time": "Extra",
+    "block": "Reserva por si hace falta",
+    "cat": "Reserva",
+    "artist": "Dani Martín",
+    "title": "Cero",
+    "dur": "4:00",
+    "note": "pop español"
+  },
+  {
+    "time": "Extra",
+    "block": "Reserva por si hace falta",
+    "cat": "Reserva",
+    "artist": "Maldita Nerea",
+    "title": "El secreto de las tortugas",
+    "dur": "3:40",
+    "note": "familiar"
+  },
+  {
+    "time": "Extra",
+    "block": "Reserva por si hace falta",
+    "cat": "Reserva",
+    "artist": "Efecto Pasillo",
+    "title": "Pan y mantequilla",
+    "dur": "3:05",
+    "note": "alegre"
+  },
+  {
+    "time": "Extra",
+    "block": "Reserva por si hace falta",
+    "cat": "Reserva",
+    "artist": "Coti",
+    "title": "Antes que ver el sol",
+    "dur": "3:30",
+    "note": "coreable"
+  },
+  {
+    "time": "Extra",
+    "block": "Reserva por si hace falta",
+    "cat": "Reserva",
+    "artist": "Paulina Rubio",
+    "title": "Y yo sigo aquí",
+    "dur": "4:10",
+    "note": "pop latino 2000s"
+  },
+  {
+    "time": "Extra",
+    "block": "Reserva por si hace falta",
+    "cat": "Reserva",
+    "artist": "Shakira",
+    "title": "Waka Waka",
+    "dur": "3:20",
+    "note": "familias y niños"
+  },
+  {
+    "time": "Extra",
+    "block": "Reserva por si hace falta",
+    "cat": "Reserva",
+    "artist": "Shakira",
+    "title": "Try Everything",
+    "dur": "3:15",
+    "note": "inglés, mensaje positivo"
+  },
+  {
+    "time": "Extra",
+    "block": "Reserva por si hace falta",
+    "cat": "Reserva",
+    "artist": "Pharrell Williams",
+    "title": "Happy",
+    "dur": "3:55",
+    "note": "muy familiar"
+  },
+  {
+    "time": "Extra",
+    "block": "Reserva por si hace falta",
+    "cat": "Reserva",
+    "artist": "Justin Timberlake",
+    "title": "CAN'T STOP THE FEELING!",
+    "dur": "3:55",
+    "note": "radio edit familiar"
+  },
+  {
+    "time": "Extra",
+    "block": "Reserva por si hace falta",
+    "cat": "Reserva",
+    "artist": "Coldplay",
+    "title": "A Sky Full of Stars",
+    "dur": "4:25",
+    "note": "cierre luminoso"
+  }
+];
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
